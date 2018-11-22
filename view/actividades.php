@@ -148,7 +148,9 @@ require 'footer.php';
     }
     else
     {
-        echo "<meta http-equiv='refresh' content='0;url=../view/index.php'>";
+				echo "<center><h1>No Llego Sesion</h1>";	
+				echo "<img src='img/logo.png'><center>";
+				echo "<meta http-equiv='refresh' content='2;url=../view/index.php'>";
     }
 }
 catch (Exception $e) {

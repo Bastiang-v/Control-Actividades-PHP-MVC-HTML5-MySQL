@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <link rel="icon" href="img/logo.png">
-
     <title>Control de Actividades</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -18,7 +17,7 @@
   <div class="row">
   <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <img class="text-center" src="img/logo.png" alt="" width="30" height="30"><a class="navbar-brand" href="#">BGWeb</a>
+  <img class="text-center" src="img/logo.png" alt="" width="30" height="30"><a class="navbar-brand" href="#"> Control de Actividades </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +27,7 @@
               <a class="nav-link" href="actividades.php">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="index.php">Salir</a>
+              <a class="nav-link disabled" href="../controller/acceso.php?opcion=salir">Salir</a>
             </li>
           </ul>
         </div>

@@ -40,7 +40,9 @@ class clogin{
 			else
 			{	
                 
-				echo "user o pass incorrecto";	
+				echo "<center><h1>Rut o Contraseña incorrectos</h1>";	
+				echo "<img src='../view/img/logo.png'><center>";
+				echo "<meta http-equiv='refresh' content='2;url=../view/index.php'>";
 			}		
 		}
 }

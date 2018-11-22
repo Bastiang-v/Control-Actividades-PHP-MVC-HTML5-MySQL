@@ -8,6 +8,7 @@ try {
         $lista = new cactividad(); 
         $tipo_actividad   = trim($_REQUEST['tipo_actividad']);
         $Operador   = trim($_REQUEST['Operador']);
+        $nuevo = $lista->rut($Operador);
         require 'header.php';
             $ver_reporte = new cactividad();
             $mostrar = $ver_reporte->mostrar_actividad($tipo_actividad,$Operador);
@@ -19,14 +20,15 @@ try {
 <br>
 <h1>Reporte Generado con exito</h1>
 <br>
-<button type="buttom" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#miventana" name="opcion" value="ver_reporte">Ver Reporte <span class="fa fa-list-alt"></span></button>
+<button type="buttom" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#miventana" name="opcion" value="ver_reporte">Ver Reporte <span class="fa fa-list-alt"></span></button><br>
+<p></p><a href="actividades.php" class="btn btn-danger btn-lg">Volver</a>
 <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-md">
 <div class="modal-content">
  <h1>Reporte</h1>
  <table class="table table-striped">   
 <tr> 
-<p>Rut Operador: <?php echo $Operador ?></p>
+<p>Rut Operador: <?php echo $nuevo ?></p>
 </tr>
                 <tr>
                     <th>Nombre</th>
@@ -66,7 +68,9 @@ try {
                 <div class="row">
 <div class="col-8 mx-auto text-center">
 <br>
-<h1>Error Actividad Seleccionada no compatible con el operador</h1>
+<h1>Error Actividad Seleccionada no compatible con el operador</h1><br>
+<p>Esta Siendo Redireccionado</p>
+<meta http-equiv="Refresh" content="2;url=actividades.php">
 </div>
 </div>
 <?php

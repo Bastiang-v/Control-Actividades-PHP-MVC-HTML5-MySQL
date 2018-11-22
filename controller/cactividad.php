@@ -13,7 +13,7 @@ class cactividad
             $lista = new funciones_actividad();
             $list = $lista->mostrar_actvidiades($tipo_actividad,$Operador);
             return $list;
-            if($lista)
+            if($list)
             {
                 return true;
             }else
@@ -85,7 +85,7 @@ class cactividad
         {
             $lista = new funciones_actividad();
             $list = $lista->desactivar_perfil($id);
-            if($lista)
+            if($list)
             {
                 return true;
             }else
@@ -105,7 +105,7 @@ class cactividad
         {
             $lista = new funciones_actividad();
             $list = $lista->activar_perfil($idact);
-            if($lista)
+            if($list)
             {
                 return true;
             }else
@@ -125,7 +125,7 @@ class cactividad
         {
             $lista = new funciones_actividad();
             $list = $lista->actualizar_perfil($idt,$nombre);
-            if($lista)
+            if($list)
             {
                 echo "<meta http-equiv='refresh' content='0;url=../view/actividades.php'>";
                 return true;
@@ -148,13 +148,18 @@ class cactividad
             $lista = new funciones_actividad();
             $list = $lista->ingresar_actividad($id_tipo,$nactividad,$dactividad,$factividad,$h_inicio,$h_termino,$rut);
             
-            if($lista)
+            if($list)
             {
-                echo "<meta http-equiv='refresh' content='0;url=../view/exito.php'>";
+                
+				echo "<center><h1>Actividad Ingresada Con Exito</h1>";	
+				echo "<img src='../view/img/logo.png'><center>";
+                echo "<meta http-equiv='refresh' content='2;url=../view/ingresar.php'>";
                 return true;
             }else
             {
-                echo 'Error al ingresar Actividad';
+                echo "<center><h1>Error al Ingresar Actividad</h1>";	
+				echo "<img src='../view/img/logo.png'><center>";
+                echo "<meta http-equiv='refresh' content='2;url=../view/ingresar.php'>";
                 return false;
             }
         }
@@ -164,6 +169,10 @@ class cactividad
         }
         
     }
+    function rut( $rut ) {
+        return number_format( substr ( $rut, 0 , -1 ) , 0, "", ".") . '-' . substr ( $rut, strlen($rut) -1 , 1 );
+    }
+    
     
     /* public function ingresar_usuario($username,$password,$rut,$nombre,$apellido,$edad,$id_telefono,$id_direccion,$id_correo)
     {

@@ -6,7 +6,8 @@ try {
     {
         require_once '../controller/cactividad.php';
         $lista = new cactividad(); 
-        $rut   = $_SESSION['rut'];
+        $rut   = $_SESSION['rut']; 
+        $nuevo = $lista->rut($rut);
                 ?>
                 <!DOCTYPE html>
 <html>
@@ -28,7 +29,7 @@ try {
   <div class="row">
   <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <img class="text-center" src="img/logo.png" alt="" width="30" height="30"><a class="navbar-brand" href="#">BGWeb</a>
+  <img class="text-center" src="img/logo.png" alt="" width="30" height="30"><a class="navbar-brand" href="#"> Control de Actividades </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +51,7 @@ try {
 <form class="form-signin" action="../controller/acceso.php" method="get">
 <br>
       <img class="mb-4" src="img/logo.png" alt="" width="150" height="150">
-      <h3 class="h3 mb-3 font-weight-normal">Bienvenido  <?php echo $session ?><br>Rut <?php echo $rut ?> </h3>
+      <h3 class="h3 mb-3 font-weight-normal">Bienvenido  <?php echo $session ?><br>Rut <?php echo $nuevo ?> </h3>
       <h3 class="h4 mb-3 font-weight-normal">Ingrese Actividad</h3>
       <input type="text" id="inputEmail" class="form-control" name="nactividad" placeholder="Nombre" required autofocus>
       <input type="text" id="inputEmail" class="form-control" name="dactividad" placeholder="Descripcion"><br>

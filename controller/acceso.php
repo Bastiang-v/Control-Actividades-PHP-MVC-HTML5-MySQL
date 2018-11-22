@@ -60,6 +60,20 @@ try {
 					
 				}
 				break;
+				case "salir":
+			try 
+			{
+				echo "<center><h1>Saliendo Del Sistema</h1>";	
+				echo "<img src='../view/img/logo.png'><center>";
+				session_start();
+				session_destroy();
+				echo "<meta http-equiv='refresh' content='2;url=../view/index.php'>";
+			} 
+			catch (Exception $e) 
+			{
+				
+			}
+		break;
 	}
 }
 catch (Exception $e) {

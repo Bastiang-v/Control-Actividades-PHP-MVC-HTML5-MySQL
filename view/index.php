@@ -22,7 +22,7 @@
       <img class="mb-4" src="img/logo.png" alt="" width="150" height="150">
       <h1 class="h3 mb-3 font-weight-normal">Control De Actividades</h1>
       <h2 class="h3 mb-3 font-weight-normal">Ingresa a tu Cuenta</h2>
-      <input type="text" id="inputEmail" class="form-control" name="rut" placeholder="Rut" required autofocus>
+      <input type="text" id="inputEmail" maxlength="9" class="form-control" name="rut" placeholder="Rut" required autofocus>
       <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña" required>
       <input type="hidden" name="opcion" value="login"> 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
